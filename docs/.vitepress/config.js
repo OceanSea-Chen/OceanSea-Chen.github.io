@@ -12,7 +12,7 @@ const nav = [
   {
     text: "Practice Site",
     items: [
-      { text: "Practice CSS", link: "https://flukeout.github.io/" },
+      { text: "Practice CSS Selector", link: "https://flukeout.github.io/" },
       {
         text: "Practice Markdown",
         link: "https://commonmark.org/help/tutorial/"
