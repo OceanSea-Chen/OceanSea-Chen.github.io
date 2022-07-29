@@ -6,7 +6,7 @@ const nav = [
   },
   {
     text: "Definition",
-    link: "/definition/",
+    link: "/definition/web/html.md",
     activeMatch: "/definition/"
   },
   {
@@ -29,6 +29,17 @@ const sidebar = {
       items: [
         { text: "07-July", link: "/diary/2022/07-July.md" },
         { text: "08-August", link: "/diary/2022/08-August.md" }
+      ]
+    }
+  ],
+  "/definition/": [
+    {
+      text: "web",
+      collapsible: true,
+      // collapsed: true,
+      items: [
+        { text: "html", link: "/definition/web/html.md" },
+        { text: "css", link: "/definition/web/css.md" }
       ]
     }
   ]

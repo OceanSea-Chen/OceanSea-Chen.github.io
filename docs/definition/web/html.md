@@ -1,10 +1,10 @@
-# 一些定义
+# HTML
 
-<https://developer.mozilla.org/en-US/docs/Web>
+<https://developer.mozilla.org/en-US/docs/Web/HTML>
 
 ---
 
-**HTML** (HyperText Markup Language)：超文本标记语言
+`HTML` (`HyperText Markup Language`)：超文本标记语言
 
 - **超文本**：单个网站内或网站之间将网页互相连接的链接
 
