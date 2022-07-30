@@ -85,19 +85,17 @@ window.addEventListener("load", doSomething, false);
 ```
 
 :::warning
-以 **HTML 的 on- 属性** 绑定监听函数需要在函数后加 **()**；
 
-前两种绑定监听函数的方法方法只会在冒泡阶段触发；
+1. 以 **HTML 的 on- 属性** 绑定监听函数需要在函数后加 **()**；
 
-`addEventListener` 的最后一个参数如果是布尔值表示是否在捕获阶段触发，默认为 `false`；如果是一个对象则：
+2. 前两种绑定监听函数的方法方法只会在冒泡阶段触发；
 
-- `capture`：是否在**捕获**阶段触发，默认为 `false`。
+3. `addEventListener` 的最后一个参数如果是布尔值表示是否在捕获阶段触发，默认为 `false`；如果是一个对象则：
 
-- `once`：监听函数是否只执行一次，默认为 `false`。
-
-- `passive`：是否禁止监听函数调用 `preventDefault()` 方法，默认为 `false`。
-
-- `signal`：`AbortSignal` 对象，为监听器设置一个信号通道，用来在需要时发出信号，移除监听函数。
+   - `capture`：是否在**捕获**阶段触发，默认为 `false`。
+   - `once`：监听函数是否只执行一次，默认为 `false`。
+   - `passive`：是否禁止监听函数调用 `preventDefault()` 方法，默认为 `false`。
+   - `signal`：`AbortSignal` 对象，为监听器设置一个信号通道，用来在需要时发出信号，移除监听函数。
 
 :::
 
@@ -154,20 +152,35 @@ btn2.onclick = () => {
 
 1. 在 `linux` 系统中：
 
-- 硬链接（`Hard Link`）：多个文件名指向统一索引节点（`Inode Index`）的情况。
+   - 硬链接（`Hard Link`）：多个文件名指向统一索引节点（`Inode Index`）的情况。
+   - 索引节点：存储文件元数据的存储区域叫做索引节点。可以通过索引节点定位到真实的文件数据。
 
-  - 索引节点：存储文件元数据的存储区域叫做索引节点。可以通过索引节点定位到真实的文件数据。
+   :::details
+   ![](/images/2022/07-29-01.jpg)
+   :::
 
-:::details
-![](/images/2022/07-29-01.jpg)
-:::
+   - 软链接（`Symbolic Link`）：特殊的文件，包含另一文件的位置信息。
 
-- 软链接（`Symbolic Link`）：特殊的文件，包含另一文件的位置信息。
-
-:::details
-![](/images/2022/07-29-02.jpg)
-:::
+   :::details
+   ![](/images/2022/07-29-02.jpg)
+   :::
 
 2. 在 `windows 中`：可以在 `cmd` 通过 `mklink` 创建软链接和硬链接；
 
 3. 用 `pnpm` 安装时， `node_modules` 文件夹下的依赖是**软链接**，链接到 `.pnpm` 中对应的文件夹，如果该依赖用到了别的包，则其**同样是软链接**，同样链接到 `.pnpm` 中对应的文件夹；`.pnpm` 中文件夹的文件是**硬链接**，链接到 `pnpm` 的存储文件夹中，由于 `windows` 硬链接不支持跨磁盘，所以如果要发挥 `pnpm` 的性能，需要在项目所在磁盘中存在 `pnpm` 的存储文件夹，如果将存储指定到了别的磁盘中，则只能复制对应文件而不是硬链接。
+
+## 30-盒模型
+
+1. 块级元素在文档内占据一行，其宽度由 `margin`、`border`、`padding`、`width` 等组成；
+
+   - `margin-left` 和 `margin-right` 的默认值为 `0`；
+   - `padding-left`、`padding-right` 的默认值为 `0`；
+   - `border-left-width`、`border-right-width` 的默认值是 `medium`，但只有当`border` 不是 `none` 时才有效，而 `border` 的默认值是 `none`；
+   - `width` 的默认值为 `auto`。
+
+2. 这几个值最终相加为一行的宽度；
+
+   - `width`、`margin` 的值可以设置为 `auto`，如果宽度不够，则由 `auto` 撑开；
+   - `width` 优先于 `margin`；
+   - 如果发生**过度约束**，如同时设置 `width`、`margin-left`、`margin-right`，但他们相加不足一行的宽度时，则 `margin-right` 会占据剩下的位置；
+   - 如果有**绝对定位** `absolute` 则 `left`、`right` 也会有同样的作用，且 `right` 会在**过度约束**发生时占据剩下的位置。
