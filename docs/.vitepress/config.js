@@ -10,12 +10,17 @@ const nav = [
     activeMatch: "/definition/"
   },
   {
-    text: "Practice Site",
+    text: "Awesome Site",
     items: [
-      { text: "Practice CSS Selector", link: "https://flukeout.github.io/" },
       {
-        text: "Practice Markdown",
-        link: "https://commonmark.org/help/tutorial/"
+        text: "Practice",
+        items: [
+          { text: "CSS Selector", link: "https://flukeout.github.io/" },
+          {
+            text: "Markdown",
+            link: "https://commonmark.org/help/tutorial/"
+          }
+        ]
       }
     ]
   }
