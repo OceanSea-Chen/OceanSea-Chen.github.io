@@ -19,6 +19,11 @@ const nav = [
           {
             text: "Markdown",
             link: "https://commonmark.org/help/tutorial/"
+          },
+          { text: "GridGarden", link: "http://cssgridgarden.com/" },
+          {
+            text: "Games",
+            link: "https://dev.to/devmount/8-games-to-learn-css-the-fun-way-4e0f"
           }
         ]
       }
@@ -32,8 +37,8 @@ const sidebar = {
       collapsible: true,
       // collapsed: true,
       items: [
-        { text: "07-July", link: "/diary/2022/07-July.md" },
-        { text: "08-August", link: "/diary/2022/08-August.md" }
+        { text: "07 - July", link: "/diary/2022/07-July.md" },
+        { text: "08 - August", link: "/diary/2022/08-August.md" }
       ]
     }
   ],
