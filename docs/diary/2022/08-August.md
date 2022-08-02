@@ -47,3 +47,28 @@ function theArr2Obj(array) {
   return map.get(0).children;
 }
 ```
+
+## 02 - vscode
+
+`vscode`中设置标签颜色：
+
+```json
+  "editor.tokenColorCustomizations": {
+    "[GitHub Light Default]": {
+      "textMateRules": [
+        {
+          "scope": ["entity.name.tag"],
+          "settings": {
+            "foreground": "#FF0000"
+          }
+        },
+        {
+          "scope": ["string"],
+          "settings": {
+            "foreground": "#0000ff"
+          }
+        }
+      ]
+    }
+  }
+```
