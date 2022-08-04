@@ -98,3 +98,14 @@ function theArr2Obj(array) {
 :::details
 ![](/images/2022/08-03-04.png)
 :::
+
+## 04 - table
+
+`table` 标签的 `border` 属性并不被 `html5` 支持，如果想为 `table` 标签设置边框：
+
+- 为 `th`、`td` 标签设置 `border` 属性；
+- 为 `table` 元素设置 `border-collapse: collapse;`。
+
+:::warning
+在 `table` 元素上设置 `border-spacing` 可以设置单元格之间的间距，但即使设置为 `0` ，边框也只会重合，不会合并
+:::
