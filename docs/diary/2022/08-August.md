@@ -109,3 +109,7 @@ function theArr2Obj(array) {
 :::warning
 在 `table` 元素上设置 `border-spacing` 可以设置单元格之间的间距，但即使设置为 `0` ，边框也只会重合，不会合并
 :::
+
+## 05 - v-show
+
+由于 `v-show` 是设置 `CSS` 的属性 `display`，有时候 `v-show` 属性并不生效的原因可能是元素上已经设置了 `display` 属性。如果不适合用 `v-if` 代替，可以设置一个类，设置 `display: none !important;` 来代替 `v-show`。
