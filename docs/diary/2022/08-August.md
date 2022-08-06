@@ -113,3 +113,22 @@ function theArr2Obj(array) {
 ## 05 - v-show
 
 由于 `v-show` 是设置 `CSS` 的属性 `display`，有时候 `v-show` 属性并不生效的原因可能是元素上已经设置了 `display` 属性。如果不适合用 `v-if` 代替，可以设置一个类，设置 `display: none !important;` 来代替 `v-show`。
+
+## 06 - leetcode
+
+`LeetCode` 中链表用 `JavaScript` 描述时，其格式是：
+
+```js
+const list = {
+  val: 0,
+  next: {
+    val: 1,
+    next: {
+      val: 2,
+      next: null
+    }
+  }
+};
+```
+
+有关题目看上去输入的是**链表**，其实输入的是上面格式。
