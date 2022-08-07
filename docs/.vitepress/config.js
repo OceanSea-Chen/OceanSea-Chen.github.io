@@ -13,6 +13,10 @@ const nav = [
     text: "Awesome Site",
     items: [
       {
+        text: "Consult",
+        items: [{ text: "Cubic-Bezier", link: "https://cubic-bezier.com" }]
+      },
+      {
         text: "Practice",
         items: [
           { text: "CSS Selector", link: "https://flukeout.github.io/" },
