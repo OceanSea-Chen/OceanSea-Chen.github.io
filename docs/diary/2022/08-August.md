@@ -149,3 +149,7 @@ const list = {
 ## 09 - video
 
 微信小程序的 `video` 如果隐藏了控制栏等按钮，那么缓冲的时候会没有提示，这时如果用了 `seek()` `play()` 等方法就像是不起作用，这是可以检查是不是正在缓冲 `@waiting=waiting` 。
+
+## 10 - trasnform
+
+`transform` 如果要实现 `3d` 效果，除了要在容器上实现 `transform-style: preserve-3d;` 外，容器的外层还要设置 `perspective: 800px;` 且该属性不能设置在容器上。
