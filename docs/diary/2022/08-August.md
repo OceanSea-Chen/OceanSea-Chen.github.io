@@ -139,7 +139,7 @@ const list = {
 
 ## 08 - cover-image
 
-微信小程序中 `cover-image` `cover-view` 原本是为了覆盖在原生组件之上的，目前原生组件已经支持同层渲染，因此不在需要它们了。
+微信小程序中 `cover-image` `cover-view` 原本是为了覆盖在原生组件之上的，目前原生组件已经支持同层渲染，因此不再需要它们了。
 
 :::details
 ![](/images/2022/08-08-01.jpg)
@@ -148,7 +148,7 @@ const list = {
 
 ## 09 - video
 
-微信小程序的 `video` 如果隐藏了控制栏等按钮，那么缓冲的时候会没有提示，这时如果用了 `seek()` `play()` 等方法就像是不起作用，这是可以检查是不是正在缓冲 `@waiting=waiting` 。
+微信小程序的 `video` 如果隐藏了控制栏等按钮，那么缓冲的时候会没有提示，这时如果用了 `seek()` `play()` 等方法就像是不起作用，这是可以检查是不是正在缓冲 `@waiting = waiting` 。
 
 ## 10 - trasnform
 
@@ -169,3 +169,34 @@ const list = {
 ## 12 - setBLEMTU
 
 小程序设置 `MTU` 时即使成功了，传输大量数据也可能失败，有可能是蓝牙自身也有传输的限制。
+
+## 13 - importmap
+
+`js` 通过 `import` 引入 `ES` 模块时，是通过指定**相对**或**绝对**路径来实现的：
+
+```js
+import dayjs from "https://cdn.skypack.dev/dayjs@1.10.7"; // ES modules
+
+console.log(dayjs("2019-01-25").format("YYYY-MM-DDTHH:mm:ssZ[Z]"));
+```
+
+如果在浏览器中希望像 `webpack` 那样引入模块时，可以通过 `importmap` 来实现：
+
+```js
+<script type="importmap">
+{
+  "imports": {
+    "dayjs": "https://cdn.skypack.dev/dayjs@1.10.7",
+  }
+}
+</script>
+<script type="module">
+  import dayjs from 'dayjs';
+
+  console.log(dayjs('2019-01-25').format('YYYY-MM-DDTHH:mm:ssZ[Z]'));
+</script>
+```
+
+## 14 - uniapp
+
+`uniapp` 中低功耗蓝牙有时候想得到特征值却不需要传值时，可以使用 `uni.readBLECharacteristicValue` 来获得；如果需要监听特征值变化时，可以使用 `uni.notifyBLECharacteristicValueChange` ，他们的响应都会在 `uni.onBLECharacteristicValueChange` 的回调函数中获得。
