@@ -53,7 +53,9 @@ const sidebar = {
       // collapsed: true,
       items: [
         { text: "html", link: "/definition/web/html.md" },
-        { text: "css", link: "/definition/web/css.md" }
+        { text: "css", link: "/definition/web/css.md" },
+        { text: "JavaScript", link: "/definition/web/javascript.md" },
+        { text: "vue", link: "/definition/web/vue.md" }
       ]
     }
   ]
