@@ -112,7 +112,7 @@ function theArr2Obj(array) {
 
 ## 05 - v-show
 
-由于 `v-show` 是设置 `CSS` 的属性 `display`，有时候 `v-show` 属性并不生效的原因可能是元素上已经设置了 `display` 属性。如果不适合用 `v-if` 代替，可以设置一个类，设置 `display: none !important;` 来代替 `v-show`。
+由于 `v-show` 是设置 `CSS` 的属性 `display`，有时候 `v-show` 属性并不生效的原因可能是元素上已经设置了 `display` 属性。如果不适合用 `v-if` 代替，可以设置一个类，设置 `display: none !important;` 来代替 `v-show`；或者用 `div` 标签将其包裹，在 `div` 上用 `v-show`。
 
 ## 06 - leetcode
 
@@ -200,3 +200,30 @@ console.log(dayjs("2019-01-25").format("YYYY-MM-DDTHH:mm:ssZ[Z]"));
 ## 14 - uniapp
 
 `uniapp` 中低功耗蓝牙有时候想得到特征值却不需要传值时，可以使用 `uni.readBLECharacteristicValue` 来获得；如果需要监听特征值变化时，可以使用 `uni.notifyBLECharacteristicValueChange` ，他们的响应都会在 `uni.onBLECharacteristicValueChange` 的回调函数中获得。
+
+## 15 - background-clip
+
+`Vue` 文档的**渐进式**三个字的渐变看起来挺有意思的，原来是用 `background-clip` `background-image` 与`-webkit-text-fill-color` 实现的。感觉有些像 PS 中的...（太久了忘了 O(∩_∩)O）
+
+:::details
+![](/images/2022/08-15-02.jpg)
+![](/images/2022/08-15-03.jpg)
+:::
+
+## 16 - 事件处理器
+
+`Vue` 文档中的内联事件处理器有些像 `JavaScript` 中的 `on` 属性绑定监听事件；事件处理器有些像 `addEventListener` 绑定监听事件。
+
+```html
+// 这种就是内联事件处理器，方法 test 中得不到事件 e
+<div @click="test()">测试1</div>
+
+// 原生js事件，传递的参数必须是 event ,方法 test 中才可以得到事件 e
+<div onclick="test(event)">测试1</div>
+
+// 这种是在内联事件中得到事件 e
+<div @click="test('a',$event,'b')"></div>
+
+// 这种就是事件处理器，方法 test 中可以得到事件 e
+<div @click="test">测试2</div>
+```
