@@ -206,8 +206,8 @@ console.log(dayjs("2019-01-25").format("YYYY-MM-DDTHH:mm:ssZ[Z]"));
 `Vue` 文档的**渐进式**三个字的渐变看起来挺有意思的，原来是用 `background-clip` `background-image` 与`-webkit-text-fill-color` 实现的。感觉有些像 PS 中的...（太久了忘了 O(∩_∩)O）
 
 :::details
+![](/images/2022/08-15-01.jpg)
 ![](/images/2022/08-15-02.jpg)
-![](/images/2022/08-15-03.jpg)
 :::
 
 ## 16 - 事件处理器
