@@ -143,6 +143,7 @@ const list = {
 
 :::details
 ![](/images/2022/08-08-01.jpg)
+
 ![](/images/2022/08-08-02.jpg)
 :::
 
@@ -207,6 +208,7 @@ console.log(dayjs("2019-01-25").format("YYYY-MM-DDTHH:mm:ssZ[Z]"));
 
 :::details
 ![](/images/2022/08-15-01.jpg)
+
 ![](/images/2022/08-15-02.jpg)
 :::
 
