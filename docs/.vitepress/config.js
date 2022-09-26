@@ -1,5 +1,10 @@
 const nav = [
   {
+    text: "Experience",
+    link: "/experience/index.md",
+    activeMatch: "/experience/"
+  },
+  {
     text: "Diary",
     link: "/diary/2022/07-July.md",
     activeMatch: "/diary/"
