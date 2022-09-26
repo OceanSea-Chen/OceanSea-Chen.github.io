@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r,d as o}from"./app.2abae24e.js";const f=JSON.parse('{"title":"HTML","description":"","frontmatter":{},"headers":[],"relativePath":"definition/web/html.md","lastUpdated":1661508035000}'),a={name:"definition/web/html.md"},n=o("",6),d=[n];function l(s,i,p,_,c,h){return r(),t("div",null,d)}var g=e(a,[["render",l]]);export{f as __pageData,g as default};
