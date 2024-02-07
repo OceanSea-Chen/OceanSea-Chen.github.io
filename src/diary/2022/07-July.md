@@ -44,7 +44,7 @@
 `slice` 还可用于数组，优先使用 `slice`。
 :::
 
-根据 **deploy.yml** 的配置，如果要使用 **github actions** 则必须使用 **yarn** 安装。
+<!-- 根据 **deploy.yml** 的配置，如果要使用 **github actions** 则必须使用 **yarn** 安装。 -->
 
 ## 28 - 事件
 
