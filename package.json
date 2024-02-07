@@ -1,8 +1,5 @@
 {
-  "engines": {
-    "node": ">=14.0.0",
-    "pnpm": ">=7.4.0"
-  },
+  "packageManager": "npm@8.14.0",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
