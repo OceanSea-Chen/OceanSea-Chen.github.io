@@ -67,17 +67,15 @@ const sidebar = {
 };
 
 export default {
-  // appearance: true,
-  // base: "/",
+  srcDir: "src",
+  cleanUrls: true,
   description: "Just a diary",
   head: [["link", { rel: "icon", href: "/images/logo.png" }]],
   ignoreDeadLinks: true,
   lang: "zh-CH",
   lastUpdated: true,
-  // markdown:{},
   title: "Diary",
   titleTemplate: "Vite & Vue powered static site generator",
-  // Theme related configurations
   themeConfig: {
     logo: "/images/logo.png",
     siteTitle: "Oceansea Notes",
