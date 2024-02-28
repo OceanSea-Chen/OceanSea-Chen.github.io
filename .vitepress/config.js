@@ -11,7 +11,7 @@ const nav = [
   },
   {
     text: "Definition",
-    link: "/definition/web/html.md",
+    link: "/definition/web/HTML/html.md",
     activeMatch: "/definition/"
   },
   {
@@ -49,19 +49,39 @@ const sidebar = {
         { text: "07 - July", link: "/diary/2022/07-July.md" },
         { text: "08 - August", link: "/diary/2022/08-August.md" }
       ]
+    },
+    {
+      text: "2024",
+      collapsible: true,
+      // collapsed: true,
+      items: [{ text: "02 - February", link: "/diary/2024/02-February.md" }]
     }
   ],
   "/definition/": [
     {
-      text: "web",
-      collapsible: true,
-      // collapsed: true,
+      text: "browser",
       items: [
-        { text: "html", link: "/definition/web/html.md" },
-        { text: "css", link: "/definition/web/css.md" },
-        { text: "JavaScript", link: "/definition/web/javascript.md" },
-        { text: "vue", link: "/definition/web/vue.md" }
+        { text: "事件循环", link: "/definition/web/browser/eventloop.md" },
+        { text: "渲染原理", link: "/definition/web/browser/render.md" }
       ]
+    },
+    {
+      text: "HTML",
+      items: [{ text: "html", link: "/definition/web/HTML/html.md" }]
+    },
+    {
+      text: "CSS",
+      items: [{ text: "css", link: "/definition/web/CSS/css.md" }]
+    },
+    {
+      text: "JavaScript",
+      items: [
+        { text: "JavaScript", link: "/definition/web/JavaScript/javascript.md" }
+      ]
+    },
+    {
+      text: "vue",
+      items: [{ text: "vue", link: "/definition/web/vue/vue.md" }]
     }
   ]
 };
