@@ -41,6 +41,12 @@
 ![](/images/browser/render/07.png)
 :::
 
+::: warning
+`script`标签引入外部`js`文件时，可以设置`async`和`defer`属性，这两个属性可以优化`js`阻塞`HTML`的解析
+
+![](/images/browser/render/26.png)
+:::
+
 ## 样式计算
 
 渲染的下一步是样式计算。
